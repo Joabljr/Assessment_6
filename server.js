@@ -5,7 +5,7 @@ const { bots, playerRecord } = require("./data");
 const { shuffleArray } = require("./utils");
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/api/robots", (req, res) => {
   try {
